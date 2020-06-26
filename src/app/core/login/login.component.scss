@@ -1,0 +1,61 @@
+@import'../../../assets/styles/base';
+.login{
+    background-color: $main-color;
+    color:$secondary-color;
+    height:100vh;
+    &__frame{
+        width:50%;  
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-55%,-60%) !important;
+        padding-bottom: 25px;
+        background-color: #a6b1e1;
+        margin: 40px;
+        border-radius: 10px;
+        box-shadow: 3px 4px 5px $secondary-color;
+    }
+    &__image{
+        width: 146px;
+        background-color: #fff;
+        border-radius: 50%;
+        height: 146px;
+        margin: 25px auto;
+    }
+    &__pic{
+        border-radius: 50%;
+        width: 146px;
+        height: 146px;
+    }
+    &__label{
+        margin:10px 0;
+    }
+    &__input{
+        background-color: $main-color;
+        border-color: $secondary-color;
+        &:focus{
+            box-shadow: none;
+        }
+    }
+    &__inputs{
+        width:50%;
+        margin: 0 auto;
+    }
+    &__password{
+        position: relative;
+    }
+    &__icons{
+        position: absolute;
+        top: 7px;
+        left: 10px;
+        cursor: pointer;
+    }
+    &__invalid{
+        color:#b81a0a !important;
+        display: inline-block;
+        margin:5px 0;
+    }
+    &__border-invalid{
+        border: solid 1px #b81a0a;
+    }
+}
