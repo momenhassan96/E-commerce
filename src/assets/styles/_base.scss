@@ -1,2 +1,30 @@
 @import './variables';
 @import './buttons';
+@import './inputs';
+@import './checkbox';
+
+.link{
+    color:$main-color;
+}
+
+.mat-snack-bar-container{
+    background-color: $secondary-color;
+    color:$main-color;
+    text-align: right;
+}
+
+.mat-simple-snackbar>span{
+    margin:0 auto;
+}
+
+button:focus {
+    outline:0;
+}
+
+*{
+    text-decoration: none !important;
+}
+
+.small-font{
+    font-size: $small-font;
+}

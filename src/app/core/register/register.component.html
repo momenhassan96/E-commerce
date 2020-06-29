@@ -1,1 +1,67 @@
-<p>register works!</p>
+<!-- <div layout-margin layout-padding>
+    <input class="ng-hide" id="input-file-id"  type="file" #image (change)="encodeImageFileAsURL(image)"/>
+<label for="input-file-id" class="md-button md-raised md-primary">Choose Files</label>
+   
+</div>
+<img [src]="images" style="width:150px; height:150px"> -->
+<div class="register rtl container-fluid">
+    <div class="register__frame">
+        <form #regisetForm="ngForm" (submit)="register(regisetForm.value)">
+                <div class="text-center">
+                    <div class="register__pic">
+                        <img [src]="imageUrl" class="register__img text-center" [ngClass]="{'border-invalid':isInvalid}"/>
+                        <span class="register__upload-file">
+                            <input class="register__upload-file__input" id="input-file-id" title="" name="image" type="file" #image (change)="encodeImageFileAsURL(image)"/>
+                            <mat-icon  class="register__upload-file__icon" aria-hidden="false" aria-label="Example add_a_photo icon">add_a_photo</mat-icon>
+                        </span>
+                    </div>
+                </div>
+                <div class="register__input mt-5">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>الاسم :</label>
+                                <input class="form-control public-input" type="text" ngModel  #name="ngModel" name="name"  [ngClass]="{'border-invalid':isInvalid || (name.invalid && name.touched)}" required/>
+                                <span class="public-invalid" *ngIf="isInvalid || (name.invalid && name.touched)">معلومات مطلوبه</span>
+                            </div>
+                            <div class="col-md-6">
+                                <label>رقم الهاتف :</label>
+                                <input class="form-control public-input" type="text" ngModel #phone="ngModel" name="phone" [ngClass]="{'border-invalid':isInvalid ||  (phone.invalid && phone.touched)}" required/>
+                                <span class="public-invalid" *ngIf="isInvalid || (phone.invalid && phone.touched)">معلومات مطلوبه</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 mt-3">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>البريد الالكتروني :</label>
+                                <input class="form-control public-input" type="text" ngModel name="email" #email="ngModel" [ngClass]="{'border-invalid':isInvalid || (email.invalid && email.touched)}" pattern="^([A-Za-z0-9._%-]+@[A-Za-z0-9._@%-]+\.[a-z]{2,3})$" required/>
+                                <span class="public-invalid" *ngIf="isInvalid ||  (email.invalid && email.touched)">معلومات مطلوبه</span>
+                                <span class="public-invalid" *ngIf="email.invalid && email.touched && email.dirty">معلومات غير صحيحه </span> 
+                            </div>
+                            <div class="col-md-6">
+                                <label>كلمه المرور :</label>
+                                <app-password-input [showPassword]="showPassword" [isInvalid]="isInvalid" (model)="getPassword($event)"></app-password-input>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-12 mt-3">
+                        <div class="col-md-6 form-check" #checkBox>
+                            <input class="form-check-input check-box" type="checkbox" id ="privacy"[(ngModel)]="privacy" required>
+                            <div class="letter-l" (click)="privacy = !privacy">L</div>
+                            <label class="custom-checkbox" for="privacy"> اوافق علي <a href="" class="link">الشروط والأحكام</a></label>
+                        </div>
+                        <div class="public-invalid" *ngIf="isInvalid">معلومات مطلوبه</div>
+                    </div> -->
+                    <div class="col-md-12 text-center">
+                         <button class="butt">انشاء حساب</button>
+                    </div>
+                    <div class="col-md-12 text-right">
+                        <button class="secondry-butt" [routerLink]="['/']" title="تسجيل الدخول" type="button">
+                            <mat-icon  aria-hidden="false" aria-label="Example login icon">login </mat-icon>
+                        </button>
+                    </div>
+                </div>
+        </form>
+    </div>
+</div>

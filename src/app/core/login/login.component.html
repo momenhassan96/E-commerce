@@ -3,23 +3,20 @@
         <div class="login__image">
             <img class="login__pic" src="../../../assets/images/login.png">
         </div>
-        <form #loginForm = "ngForm" (submit)="login(loginForm.value)">
+        <form #loginForm = "ngForm" (ngSubmit)="login(loginForm.value)">
             <div class="login__inputs">
                 <div class="">
                     <label class="login__label">البريد الالكتروني:</label>
-                    <input class="form-control login__input" name="email" [ngClass]="{'login__border-invalid':isInvalid}" ngModel required/>
-                    <span *ngIf="isInvalid" class="login__invalid">معلومات مطلوبة</span>
+                    <input class="form-control public-input" name="email" [ngClass]="{'border-invalid':isInvalid}" ngModel required/>
+                    <span *ngIf="isInvalid" class="public-invalid">معلومات مطلوبة</span>
                 </div>
                     <label class="login__label">كلمه المرور:</label>
                 <div class="login__password">
-                    <input class="form-control login__input" name="password" [type]="showPassword ? 'password': 'text'" ngModel  [ngClass]="{'login__border-invalid':isInvalid}"required/>
-                    <span class="login__icons" *ngIf="!showPassword" (click)="showPassword = !showPassword"><mat-icon aria-hidden="false" aria-label="Example visibility icon">visibility</mat-icon></span>
-                    <span class="login__icons" *ngIf="showPassword"   (click)="showPassword = !showPassword"><mat-icon aria-hidden="false" aria-label="Example visibility_off icon">visibility_off</mat-icon></span>
-                    <span *ngIf="isInvalid"  class="login__invalid">معلومات مطلوبة</span>
+                    <app-password-input [showPassword]="showPassword" [isInvalid]="isInvalid" (model)="getPassword($event)"></app-password-input>
                 </div>
                 <div class="text-center">
                     <button class="butt" >تسجيل دخول</button>
-                    <button class="butt" type="button">انشاء حساب</button>
+                    <button class="butt" type="button" [routerLink]="['/register']" >انشاء حساب</button>
                 </div>
             </div>
         </form>

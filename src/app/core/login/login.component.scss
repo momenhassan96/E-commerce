@@ -30,32 +30,12 @@
     &__label{
         margin:10px 0;
     }
-    &__input{
-        background-color: $main-color;
-        border-color: $secondary-color;
-        &:focus{
-            box-shadow: none;
-        }
-    }
+
     &__inputs{
         width:50%;
         margin: 0 auto;
     }
     &__password{
         position: relative;
-    }
-    &__icons{
-        position: absolute;
-        top: 7px;
-        left: 10px;
-        cursor: pointer;
-    }
-    &__invalid{
-        color:#b81a0a !important;
-        display: inline-block;
-        margin:5px 0;
-    }
-    &__border-invalid{
-        border: solid 1px #b81a0a;
     }
 }

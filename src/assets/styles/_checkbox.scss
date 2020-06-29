@@ -1,0 +1,40 @@
+.form-check{
+    margin-right: 9px;
+    position: relative;
+}
+.custom-checkbox{
+    margin-right:10px;
+}
+.custom-checkbox::after{
+    content: "";
+    width: 21px;
+    height: 21px;
+    background-color: $main-color;
+    position: absolute;
+    top: 2px;
+    right: -8px;
+    cursor: pointer;
+    border-radius: 2px;
+    border: solid 1px $secondary-color;
+}
+.letter-l{
+    position: absolute;
+    font-size: 20px;
+    top: -2px;
+    right: -6px;
+    z-index: 99;
+    font-weight: 600;
+    transform: scaleX(-1) rotate(-35deg);
+    color: $secondary-color;
+    margin: 2px;
+    display: none;
+    cursor: pointer;
+}
+
+.check-box:checked +.letter-l{
+    display: block;
+}
+
+.check-box:not(:checked) ~ .custom-checkbox::after{
+    border:solid 1px red
+}

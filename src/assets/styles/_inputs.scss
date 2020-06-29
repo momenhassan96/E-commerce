@@ -1,0 +1,20 @@
+.public-input{
+    background-color: $main-color;
+    border-color: $secondary-color;
+    &:focus{
+        box-shadow: none;
+    }
+}
+.public-invalid{
+    color:#b81a0a !important;
+    display: inline-block;
+    margin:5px 0;
+}
+
+.border-invalid{
+     border: solid 1px #b81a0a;
+}
+
+.public-relative{
+    position: relative;
+}

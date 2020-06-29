@@ -1,1 +1,85 @@
-<p>header works!</p>
+<nav class="nav rtl">
+    <div class="container">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-2 py-3">
+                    <a routerLink="/home" class="nav__header">السوق</a>
+                </div>
+                <div class="col-md-6 py-3">
+                    <form #favorite_borderProduct = "ngForm" class="public-relative">
+                        <input class="form-control public-input" type="text" #product="ngModel" ngModel name="product"/>
+                        <span class="nav__icon"><mat-icon aria-hidden="false" aria-label="Example search icon">search</mat-icon></span>
+                    </form>
+                </div>
+                <div class="col-md-4 py-3">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <a class="nav__whish-list" routerLink="/"><mat-icon class="icon" aria-hidden="false" aria-label="Example favorite_border icon" title="المفضلات">favorite_border</mat-icon></a>
+                        </div>
+                        <div class="col-md-5">
+                            <span class="nav__cart"><mat-icon class="icon" aria-hidden="false" aria-label="Example shopping_cart icon">shopping_cart</mat-icon></span>
+                            <span class="nav__cart__name">عربه التسوق</span>
+                            <ul class="nav__cart__select">
+                                <button class="nav__cart__select__butt" (click)="showList = !showList"><mat-icon class="arrow-down" aria-hidden="false" aria-label="Example arrow_drop_down  icon">arrow_drop_down </mat-icon>$1000 </button>
+                                <span  class="nav__cart__list" *ngIf="showList">
+                                    <li class="nav__cart__select__item" >
+                                        <img class="nav__cart__select__item__pic" src="../../../assets/images/logoPic.png"/>
+                                        <ul class="product">
+                                            <li>ProductNAme</li>
+                                            <li class="small-font">Salary <span>*1</span></li>
+                                        </ul>
+                                        <span><mat-icon aria-hidden="false" aria-label="Example delete  icon">delete</mat-icon></span>
+                                    </li>
+                                    <li class="nav__cart__select__item" >
+                                        <img class="nav__cart__select__item__pic" src="../../../assets/images/logoPic.png"/>
+                                        <ul class="product">
+                                            <li>ProductNAme</li>
+                                            <li class="small-font">Salary <span>*1</span></li>
+                                        </ul>
+                                        <span><mat-icon aria-hidden="false" aria-label="Example delete  icon">delete</mat-icon></span>
+                                    </li>
+                                    <li class="nav__cart__select__item" >
+                                        <img class="nav__cart__select__item__pic" src="../../../assets/images/logoPic.png"/>
+                                        <ul class="product">
+                                            <li>ProductNAme</li>
+                                            <li class="small-font">Salary <span>*1</span></li>
+                                        </ul>
+                                        <span><mat-icon aria-hidden="false" aria-label="Example delete  icon">delete</mat-icon></span>
+                                    </li>
+                                    <li class="nav__cart__select__item" >
+                                        <img class="nav__cart__select__item__pic" src="../../../assets/images/logoPic.png"/>
+                                        <ul class="product">
+                                            <li>ProductNAme</li>
+                                            <li class="small-font">Salary <span>*1</span></li>
+                                        </ul>
+                                        <span><mat-icon aria-hidden="false" aria-label="Example delete  icon">delete</mat-icon></span>
+                                    </li>
+                                    <li class="nav__cart__select__item" >
+                                        <img class="nav__cart__select__item__pic" src="../../../assets/images/logoPic.png"/>
+                                        <ul class="product">
+                                            <li>ProductNAme</li>
+                                            <li class="small-font">Salary <span>*1</span></li>
+                                        </ul>
+                                        <span><mat-icon aria-hidden="false" aria-label="Example delete  icon">delete</mat-icon></span>
+                                    </li>
+                                    <li class="nav__cart__select__item" >
+                                        <img class="nav__cart__select__item__pic" src="../../../assets/images/logoPic.png"/>
+                                        <ul class="product">
+                                            <li>ProductNAme</li>
+                                            <li class="small-font">Salary <span>*1</span></li>
+                                        </ul>
+                                        <span><mat-icon aria-hidden="false" aria-label="Example delete  icon">delete</mat-icon></span>
+                                    </li>
+                                </span>
+                            </ul>
+                            <span class="nav__cart__notification"><p class="nav__cart__notification__item">1</p></span>
+                        </div>
+                        <div class="col-md-5">
+                            <img src="../../../assets/images/login.png"  style="width:50px; height:50px; border-radius: 50%;" class="nav__img"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

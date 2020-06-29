@@ -11,10 +11,22 @@ import { SharedModule } from './shared/shared.module';
 import { FeaturesModule } from './features/features.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule,CoreModule,SharedModule,FeaturesModule, BrowserAnimationsModule,MaterialModule],
+  imports: [
+      BrowserModule,
+      AppRoutingModule, 
+      HttpClientModule,
+      CoreModule,
+      SharedModule,
+      FeaturesModule,
+      BrowserAnimationsModule,
+      MaterialModule,
+      ReactiveFormsModule,
+      FormsModule
+    ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,

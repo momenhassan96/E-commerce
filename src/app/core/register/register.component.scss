@@ -1,0 +1,56 @@
+@import '../../../assets/styles/base';
+
+.register{
+    height: 100vh;
+    background-color: $main-color;
+    color:$secondary-color;
+    &__frame{
+        width:50%;
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-55%,-60%) !important;
+        padding: 25px;
+        background-color: #a6b1e1;
+        margin: 40px;
+        border-radius: 10px;
+        box-shadow: 3px 4px 5px $secondary-color;
+    }
+    &__img{
+        width: 146px;
+        background-color: #fff;
+        border-radius: 50%;
+        height: 146px;
+        margin: 25px auto;
+    }
+    &__pic{
+        position: relative;
+        width: 146px;
+        height: 146px;
+        margin: 0 auto;
+    }
+    &__upload-file{
+        position: absolute;
+        bottom: 0;
+        right: -6px;
+        height: 34px;
+        width: 35px;
+        background: rgba($secondary-color,0.7);
+        border-radius: 50%;
+        text-align: center;
+            &__icon{
+                margin: 3px 0;
+                cursor: pointer;
+                color: $main-color;
+            }
+            &__input{
+                    opacity: 0;
+                    position: absolute;
+                    left: 1px;
+                    top: 3px;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 999;
+            }
+    }
+}
